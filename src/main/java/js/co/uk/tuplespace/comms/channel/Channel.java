@@ -18,6 +18,7 @@
  */
 package js.co.uk.tuplespace.comms.channel;
 
+import js.co.uk.tuplespace.tuple.Tuple;
 
 /**
  * A channel. Remove takes the head and insert adds to the end.
@@ -30,12 +31,12 @@ public interface Channel<T> {
      * Insert at the end of the Channel
      * @param t
      */
-    void insert(final T t) throws ChannelTimeoutException;
+    void insert(final Tuple t) throws ChannelTimeoutException;
 
     /**
      * Remove from the front
      * @return
      */
-    T remove() throws ChannelTimeoutException;
+    Tuple remove() throws ChannelTimeoutException;
     
 }
